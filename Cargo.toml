@@ -12,3 +12,9 @@ lto = "fat"
 panic = "abort"
 
 [dependencies]
+clap = "2"
+hex = "0.4"
+sha2 = "0.10"
+
+[dependencies.rusqlite]
+version = "0.26"
