@@ -7,6 +7,7 @@ authors = ["LJason <ljason@ljason.cn>"]
 readme = "README.md"
 description = "检查文件的校验和"
 license-file = "LICENSE"
+repository = "https://github.com/LJason77/Checksum"
 
 [profile.release]
 codegen-units = 1
