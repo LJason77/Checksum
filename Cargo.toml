@@ -1,10 +1,12 @@
 [package]
-name = "checksum"
+name = "check_sum"
 version = "1.0.0"
 edition = "2021"
 rust-version = "1.59"
 authors = ["LJason <ljason@ljason.cn>"]
 readme = "README.md"
+description = "检查文件的校验和"
+license-file = "LICENSE"
 
 [profile.release]
 codegen-units = 1
