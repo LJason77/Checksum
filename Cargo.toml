@@ -1,8 +1,8 @@
 [package]
 name = "checksum"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
-rust-version = "1.57"
+rust-version = "1.59"
 authors = ["LJason <ljason@ljason.cn>"]
 readme = "README.md"
 
@@ -12,9 +12,14 @@ lto = "fat"
 panic = "abort"
 
 [dependencies]
-clap = "2"
 hex = "0.4"
 sha2 = "0.10"
+num_cpus = "1"
+
+[dependencies.clap]
+version = "3"
+default-features = false
+features = ["std", "color", "derive", "cargo"]
 
 [dependencies.rusqlite]
-version = "0.26"
+version = "0.27"
