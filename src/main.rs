@@ -68,10 +68,10 @@ fn main() -> Result<(), Box<dyn Error>> {
             let mut file = File::open(&path).unwrap();
             let len = file.metadata().unwrap().len() / 1000;
             'l: loop {
-                if TASK.load(Ordering::Relaxed) < jobs {
+                if TASK.load(Ordering::SeqCst) < jobs {
                     break 'l;
                 }
-                sleep(Duration::from_secs(len));
+                sleep(Duration::from_micros(len));
             }
             let tx = tx.clone();
             spawn(move || {
